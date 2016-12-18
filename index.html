@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cumbertech</title>
+	<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <title>Initiating You</title>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+		<script src="js\bootstrap.js"></script>
+
+		<link href='css/bootstrap.css' rel='stylesheet'>
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+		<script src="https://use.fontawesome.com/8856c47431.js"></script> 
+		<style>
+.navbar{
+	background-color: white;
+	border: none;
+}
+.navbar>.container>.collapse>.nav
+{
+	padding-top: 30px;
+	
+}
+.navbar>.container>.collapse>.nav>li>a
+{
+	color:  black;
+}
+.navbar>.container>.collapse>.nav>li>a:hover
+{
+	color:  #F75D59;
+	background-color: white;
+}
+.main{
+	margin-bottom: 80px;
+	margin-top:0px;
+}
+.ch-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	cursor: default;
+	-webkit-perspective: 900px;
+	-moz-perspective: 900px;
+	-o-perspective: 900px;
+	-ms-perspective: 900px;
+	perspective: 900px;
+}
+.ch-info{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.ch-info > div {
+	display: block;
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	-o-transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+}
+
+.ch-info .ch-info-front {
+	box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);
+}
+
+.ch-info .ch-info-back {
+	-webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	-moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	-o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	-ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	background: green;
+	opacity: 0;
+}
+
+.ch-img-1 { 
+	background-image: url(http://initiatingyou.com/iy/sites/all/themes/nexus/images/3.jpg);
+}
+
+.ch-img-2 { 
+	background-image: url(http://initiatingyou.com/iy/sites/all/themes/nexus/images/1.jpg);
+}
+
+.ch-img-3 { 
+	background-image: url(http://initiatingyou.com/iy/sites/all/themes/nexus/images/pf_m.jpg);
+}
+
+.ch-info h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 24px;
+	margin: 0 15px;
+	padding: 60px 0 0 0;
+	height: 110px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-shadow: 
+		0 0 1px #fff, 
+		0 1px 2px rgba(0,0,0,0.3);
+}
+
+.ch-info p {
+	color: #fff;
+	padding: 10px 5px;
+	font-style: italic;
+	margin: 0 30px;
+	font-size: 12px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.ch-info p a {
+	display: block;
+	color: #fff;
+	color: rgba(255,255,255,0.7);
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 9px;
+	letter-spacing: 1px;
+	padding-top: 4px;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.ch-info p a:hover {
+	color: #fff222;
+	color: rgba(255,242,34, 0.8);
+	text-decoration: none;
+}
+
+.ch-item:hover .ch-info-front {
+	-webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	-moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	-o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	-ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	opacity: 0;
+}
+
+.ch-item:hover .ch-info-back {
+	-webkit-transform: rotate3d(1,0,0,0deg);
+	-moz-transform: rotate3d(1,0,0,0deg);
+	-o-transform: rotate3d(1,0,0,0deg);
+	-ms-transform: rotate3d(1,0,0,0deg);
+	transform: rotate3d(1,0,0,0deg);
+	opacity: 1;
+}
+.ch-grid {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.ch-grid:after,
+.ch-item:before {
+	content: '';
+    display: table;
+}
+
+.ch-grid:after {
+	clear: both;
+}
+
+.ch-grid li {
+	width: 220px;
+	height: 220px;
+	display: inline-block;
+	margin: 60px;
+}
+.footer {
+	background-color: #343434;
+	color: white;
+	border-top: 5px solid ;
+	border-color: #F75D59;
+}
+.footer h4{
+	color: white;
+	margin-left: 80px;
+}
+.box li{
+	margin-left: 80px;
+	color: #F75D59;
+}
+.box a{
+	color: #F75D59;
+}
+.box a:hover{
+	color:black;
+	text-decoration: none;
+}
+.box{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.box h3{
+	line-height: 
+}
+.para a:hover{
+	text-decoration: none;
+}
+.boxin{
+	margin-top:20px; 
+}
+
+.box1{
+	color: white;
+	background-color: #F75D59;
+	border-radius: 25px;
+	height: auto;
+	padding: 20px;
+	padding-bottom: 40px;
+	text-align: center;
+	font-size: 1.8em;
+	line-height: 108%;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-bottom: 5px solid #F75D59;
+}
+.blogs h1{
+	text-align: center;
+}
+.heading{
+	margin-bottom: 30px;
+}
+.headin{
+	margin-top:70px; 
+	margin-bottom:30px;
+}
+.hding{
+	margin-bottom: 20px;
+}
+.box1 button:hover{
+    color: black;
+}
+.butt:hover>p{
+	color:black;
+}
+.clients{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.footer-social a i{
+	color:white;
+	padding-bottom: 30px;
+}
+.footerfinal{
+	background-color: #1a1a1a;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	color: #E5E4E2;
+}
+.footerfinal a{
+	color:white;
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <h1 >
+        </div>
+      <a href="#" class="navbar-brand">
+      <img style="padding-left:25px;" src="http://initiatingyou.com/iy/sites/all/themes/nexus/logo.png" alt="Home">
+      </a>
+      </h1>
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Internships <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">Hobby-Based</a></li>
+          <li><a href="#">Virtual</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Services <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Career Counselling</a></li>
+          <li><a href="#">Resume-Building</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">My Account</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<br>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	<div class="item active">
+	  <img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/slide-image-1.jpg">
+	</div>
+	<div class="item">
+	  <img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/slide-image-2.jpg">
+	</div>
+	<div class="item">
+		<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/slide-image-3.jpg">  
+	</div>
+	<div class="item">
+		<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/slide-image-5.png">
+	</div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="container">
+        	<div class="row main">
+        		<div class="container">
+			<section class="main">
+			
+				<ul class="ch-grid col-sm-12">
+					<li>
+						<div class="ch-item">				
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-1"></div>
+								<div class="ch-info-back">
+									<h3>Counselling</h3>
+									<p>Unmatched Services <a href="#">Know More</a></p>
+								</div>	
+							</div>
+						</div>
+						<br>
+						<div class="para"><p style="font-size: 30px; text-align: center; color: #606060; display:inline-block; text-decoration:none;"><a style="color:#606060;" href="/iy/content/services#career"><strong>CAREER</strong> COUNSELLING</a></p></div>
+					</li>
+					<li>
+						<div class="ch-item">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-2"></div>
+								<div class="ch-info-back">
+									<h3>Internships</h3>
+									<p>Internships Opportunities<a href="#">View All</a></p>
+								</div>
+							</div>
+						</div>
+						<br>
+					</br>
+					<br>
+						<div class="para"><p style="font-size: 30px; text-align: center;"><a style="color:#606060;" href="/iy/content/internships"><strong>Internships</strong></a></p></div>
+					</li>
+					<li>
+						<div class="ch-item">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-3"></div>
+								<div class="ch-info-back">
+									<h3>Resume</h3>
+									<p>Build your Resume <a href="#">Get Started!</a></p>
+								</div>
+							</div>
+						</div>
+						<br>
+				<div class="para"><p style="font-size: 30px; text-align: center;"><a style="color:#606060" href="/iy/content/services#resume"><strong>RÉSUMÉ</strong> BUILDING</a></p></div>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+        </div>
+<div class="container">
+	<div class"text-center">
+<div class="box1">
+	
+		<p>People say,<br>
+	
+		Do this, do that<br>
+		
+		You will be on track<br>
+		
+		We say,<br>
+		
+		Just relax & settle down<br>
+		
+		Follow your heart<br>
+		
+		Let the breath come out.<br></p>
+		
+	    <div class="hding"><h2>Give us a chance to provide a Platform to your Interest!</h2></div>
+		
+		<button type="button" class="btn btn-default butt" style="color: #FF6666; font-size: .7em;"><p>EXPERIENCE YOUR JOURNEY WITH US</p></button>
+	</div>
+</div>
+</div>
+<div class="row text-center headin">
+	<div class="contianer">
+			<h1> <b>InitiatingYou</b> Blogs</h1>
+	</div>
+	</div>
+<div class='container'>
+		<div class='row text-justify'>
+            <div class='col-sm-5'>
+        	    <div class="heading">
+        	    	<h5><big><b>Journey of a dancing will power!</b></big></h5>
+					<h5>By Kanika Dua</h5>
+				</div>
+	                <p>Ever wondered what it will be, to be living, yet to be dead! To have a pumping heart, yet, there is no soul to inject.” Such is a story of an amazing women Sudha Chandran, who crossed all the difficulties in life with her strong will power and sheer determination.</br><a href="#" style="color:#F75D59">Continue Reading</a></p>
+	        </div>
+	        <div class='col-sm-5 col-sm-offset-2'>
+	    	    <div class="heading">
+	    	    	<h5><big><b>5 "Mistakes" That Can Actually Help Your Career</b></big></h5>
+					<h5>By Manchit Sachdeva</h5>
+				</div>
+	                <p>We all have some quirks and qualities that we simply want to get rid of but never do. We all repeat some things over and over again and feel bad about them too. Of course, we should rub off some of our habits and idiosyncrasies. But some of the 'so called mistakes' that we make are actually not bad at all and can actually help our career. Here are these five “mistakes” that are actually good for you :<br><a href="#" style="color:#F75D59">Continue Reading</a></p>
+	        </div>   
+	    </div>
+	</div>
+	<div class="btnnew">
+		<div class="row text-center">
+             <button type="button" class="btn btn-default"style="background-color: #FF6666; color:white; font-size:1.3em; padding:18px; border-radius:0px;";>View More Blogs</button>
+		</div>
+	</div>
+	<div class="row text-center clients">
+	<div class="contianer">
+			<h1> <b>Our</b> Clients</h1>
+	</div>
+	</div>
+	<div class="row">
+	<div class="container">
+        	<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                <img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll3.jpg" alt="" />  
+				
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/bunk.jpg" alt="" />
+     			
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll.jpg" alt="" />
+     			
+                    <img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/rider.jpg" alt="" />
+             
+                    <img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll5.jpg" alt="" />  
+           
+                    <img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll6.jpg" alt="" />  
+     			
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll7.jpg" alt="" />  
+     			
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll8.jpg" alt="" />  
+				
+					<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll9.jpg" alt="" />  
+     			
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll10.jpg" alt="" />  
+     			
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll11.jpg" alt="" />  
+     			
+     				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll12.jpg" alt="" />  
+					
+					<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll13.jpg" alt="" />  
+    				
+    				<img src="http://initiatingyou.com/iy/sites/all/themes/nexus/images/scroll14.jpg" alt="" />
+            </marquee>
+        </div>
+    </div>			
+</div>
+ <div class="container-fluid footer">
+        	<div class='row text-left'>
+	        <div class='col-sm-3'>
+	    	    <div class="box">
+	                <h4>INITIATING YOU</h4>
+	                <div class="boxin">
+	                <ul class='list-unstyled'>
+	                	<li><a href="#">ABOUT US</a> </li>
+	                	<li><a href="#">PRIVACY</a></li>
+	                	<li><a href="#">TERMS & CONDITIONS</a></li>
+	                	<li><a href="#">CONTACT US</a></li>
+	                </ul>
+	            </div>
+	            </div>
+	        </div>
+	        <div class='col-sm-3'>
+	    	    <div class="box">
+	                <h4>STUDENTS</h4>
+	                <div class="boxin">
+	                <ul class='list-unstyled'>
+	                	<li><a href="#">REGISTER</a>/<a href="#">LOGIN</a> </li>
+	                	<li><a href="#">RÉSUMÉ BUILDING</a></li>
+	                	<li><a href="#">CAREER COUNSELLING</a></li>
+	                	<li><a href="#">JOIN US</a></li>
+	                </ul>
+	            </div>
+	            </div>
+	        </div>
+	        <div class='col-sm-3'>
+	    	    <div class="box">
+	                <h4>EMPLOYERS</h4>
+	                <div class="boxin">
+	                <ul class='list-unstyled'>
+	                	<li><a href="#">REGISTER</a> </li>
+	                	<li><a href="#">BENEFITS</a></li>
+	                	<li><a href="#">TERMS OF BENEFITS</a></li>
+	                </ul>
+	            </div>
+	            </div>
+	        </div>
+	         <div style="padding-top:60px;" class='col-sm-3'>
+	          	<div class="col-sm-8">
+	    	      <div class="form-group">
+				
+				  <input type="text" class="form-control" id="usr">
+				</div>
+
+				</div>
+				<div style="margin-left:-20px;" class="col-sm-4">
+					<button type="button" class="btn btn-default">Search</button>
+				</div>
+	        </div>     
+        </div>
+          <div class="footer-social">
+        	<div class="row text-center">
+    			<p style="text-align:center">
+    			<div class="col-sm-4 col-sm-offset-4">
+<!--Facebook icon-->
+				<a href="http://facebook.com/flashissue" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;
+<!--Google+ icon-->
+ 	 	 	 	<a href="http://plus.google.com" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i> </a> &nbsp;&nbsp;
+<!--Linkedin icon-->
+				<a href="http://twitter.com/flashissue" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i> </a>&nbsp;&nbsp;
+<!--Twitter icon-->
+ 	   	   	    <a href="http://pinterest.com" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i> </a> &nbsp;&nbsp;
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footerfinal">
+    	<div class="row text-center">
+    	<small>© 2016</small><a href="#"> InitiatingYou</a>.<small> Developed By</small> <a href="#">VD|SS.</a>
+    </div>
+    </div>
+</body>
+</html>

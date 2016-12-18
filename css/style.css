@@ -1,0 +1,13 @@
+#box{
+	color: white;
+	background-color: #FF6666;
+	border-radius: 25px;
+	height: auto;
+	padding: 5px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
